@@ -49,10 +49,10 @@ final class HttpClientTest extends TestCase
         $client = new HttpClient('');
         $resp = $client->getToken($this->login, $this->password);
         $respArr = json_decode($resp, true);
-        $errorMsg = '';
+        $errorMsg = 'Access denied';
 
         if (array_key_exists('result', $respArr)) {
-            $this->token = $respArr['result'];
+            $errorMsg = '';
         }
 
         $this->assertEquals('', $errorMsg);
