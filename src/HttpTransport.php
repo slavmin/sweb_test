@@ -8,7 +8,7 @@ final class HttpTransport
 {
     private string $url;
     private array $data;
-    private $headers;
+    private array $headers;
 
     const CONTENT_HEADER = 'Content-Type: application/json; charset=utf-8';
     const ACCEPT_HEADER = 'Accept: application/json';
